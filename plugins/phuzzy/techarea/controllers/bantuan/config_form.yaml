@@ -1,0 +1,10 @@
+name: Bantuan
+form: $/phuzzy/techarea/models/bantuan/fields.yaml
+modelClass: Phuzzy\Techarea\Models\Bantuan
+defaultRedirect: phuzzy/techarea/bantuan
+create:
+    redirect: 'phuzzy/techarea/bantuan/update/:id'
+    redirectClose: phuzzy/techarea/bantuan
+update:
+    redirect: phuzzy/techarea/bantuan
+    redirectClose: phuzzy/techarea/bantuan

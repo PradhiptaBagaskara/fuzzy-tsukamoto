@@ -1,0 +1,240 @@
+title = "User Profile"
+url = "/user/profile/:id?"
+is_hidden = 0
+layout = "fixed"
+[viewBag]
+activeMenu = "profile"
+
+[fuzzy]
+
+[account]
+==
+{% set bantuan = fuzzy.getBantuan(user.id) %}
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      User Dashboard
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="#">user</a></li>
+      <li class="active">User status</li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+
+    <div class="row">
+      <div class="col-md-3">
+
+        <!-- Profile Image -->
+        <div class="box box-primary">
+          <div class="box-body box-profile">
+            {% set nameEncode = user.name | url_encode %}
+            <img class="profile-user-img img-responsive img-circle"
+              src="{{'https://ui-avatars.com/api/?name='~nameEncode}}" alt="User profile picture">
+
+            <h3 class="profile-username text-center text-capitalize">{{ user.name }}</h3>
+
+
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+
+        <!-- About Me Box -->
+        <div class="box box-primary">
+          <div class="box-header with-border">
+            <h3 class="box-title">Summary</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <strong><i class="fa fa-group margin-r-5"></i> Tipe Keluarga</strong>
+
+            <p class="text-muted text-capitalize">
+              {% if keluarga %}
+              {{keluarga.keluarga_output.name}}
+              {% else %}
+              harap lengkapi form dulu
+              {% endif %}
+            </p>
+
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+      <div class="col-md-9">
+        <div class="nav-tabs-custom">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#timeline" data-toggle="tab">Status Bantuan</a></li>
+            <li><a href="#settings" data-toggle="tab">Settings</a></li>
+          </ul>
+          <div class="tab-content">
+
+            <!-- /.tab-pane -->
+            <div class="tab-pane active" id="timeline">
+              <!-- The timeline -->
+              <ul class="timeline timeline-inverse">
+                <!-- timeline time label -->
+                <!-- <li class="time-label">
+                        <span class="bg-red">
+                          10 Feb. 2014
+                        </span>
+                  </li> -->
+                <!-- /.timeline-label -->
+                <!-- timeline item -->
+                {% if bantuan %}
+                <li>
+                  <i class="fa fa-clock-o bg-yellow"></i>
+
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header"><a>Direview</a></h3>
+
+                    <div class="timeline-body">
+                      <p>status anda masih direview, harap lakukan pengecekan secara berkala</p>
+                    </div>
+                  </div>
+                </li>
+                {% else %}
+                <li>
+
+                  <i class="fa fa-clock-o bg-red"></i>
+
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header"><a>Form diperlukan</a></h3>
+
+                    <div class="timeline-body">
+                      <p>anda belum melakukan pengisian form. harap lakukan pengisian form <a
+                          href="{{url('/user/form')}}">disini</a> </p>
+                    </div>
+                  </div>
+                </li>
+                {% endif %}
+                <!-- END timeline item -->
+                <!-- timeline item -->
+                {% if bantuan.status %}
+                {% if bantuan.bantuan %}
+                <li>
+                  <i class="fa fa-check bg-green"></i>
+
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header no-border "><a>Menerima Bantuan</a>
+                    </h3>
+                    <div class="timeline-body">
+                      <p>Selamat {{ user.name }},</p>
+                      <p>Anda mendapatkan bantuan</p>
+                      <p>semoga bermanfaat :)</p>
+                    </div>
+                  </div>
+                </li>
+                {% else %}
+                <li>
+                  <i class="fa fa-ban bg-red"></i>
+
+                  <div class="timeline-item">
+
+                    <h3 class="timeline-header text-danger"><a>Tidak Menerima Bantuan</a></h3>
+
+                    <div class="timeline-body">
+                      <p> Mohon maaf {{ user.name }},</p>
+                      <p> Semoga beruntung lain kali :)</p>
+
+                    </div>
+                
+                  </div>
+                </li>
+                {% endif %}
+
+                {% endif %}
+                <li>
+                  <i class="fa fa-clock-o bg-gray"></i>
+                </li>
+
+              </ul>
+            </div>
+            <!-- /.tab-pane -->
+
+            <div class="tab-pane" id="settings">
+              {{ form_ajax('onUpdate', {class : "form-horizontal"}) }}
+
+              <div class="form-group">
+                <label for="accountName" class="col-sm-2 control-label">Full Name</label>
+                <div class="col-sm-10">
+
+                  <input name="name" type="text" class="form-control" id="accountName" value="{{ user.name }}">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="accountEmail" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+
+                  <input name="email" type="email" class="form-control" id="accountEmail" value="{{ user.email }}">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="accountEmail" class="col-sm-2 control-label">Gaji</label>
+                <div class="col-sm-10">
+
+                  <input name="salary" type="number" class="form-control" id="accountSalary" value="{{ user.salary }}">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="accountPassword" class="col-sm-2 control-label">New Password</label>
+                <div class="col-sm-10">
+
+                  <input name="password" type="password" class="form-control" id="accountPassword">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="accountPasswordConfirm" class="col-sm-2 control-label">Confirm New Password</label>
+                <div class="col-sm-10">
+
+                  <input name="password_confirmation" type="password" class="form-control" id="accountPasswordConfirm">
+                </div>
+              </div>
+
+              {% if updateRequiresPassword %}
+              <p>To change these details, please confirm your current password.</p>
+              <div class="form-group">
+                <label for="accountPasswordCurrent" class="col-sm-2 control-label">Current Password <small
+                    class="text-danger">* required</small></label>
+                <div class="col-sm-10">
+
+                  <input name="password_current" type="password" class="form-control" id="accountPasswordCurrent">
+                </div>
+              </div>
+              {% endif %}
+
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-danger">Simpan</button>
+                </div>
+              </div>
+
+              {{ form_close() }}
+
+            </div>
+            <!-- /.tab-pane -->
+          </div>
+          <!-- /.tab-content -->
+        </div>
+        <!-- /.nav-tabs-custom -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+  </section>
+  <!-- /.content -->
+</div>

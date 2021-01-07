@@ -1,0 +1,9 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    rule:
+        label: Rule
+        span: full
+        type: text

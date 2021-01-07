@@ -1,0 +1,7 @@
+<?php
+$key = $record->status < 1 ? 'review' : 'publish';
+$class = $record->status < 1 ? 'mute' : 'success';
+?>
+<span class="oc-icon-circle text-<?= $class ?>">
+    <?= e($key) ?>
+</span>

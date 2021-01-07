@@ -1,0 +1,39 @@
+fields:
+    kriteria:
+        label: 'Group Kriteria'
+        nameFrom: name
+        descriptionFrom: id
+        span: auto
+        type: relation
+    sejahtera:
+        label: 'Group Keluarga Sejahtera'
+        nameFrom: name
+        descriptionFrom: id
+        span: auto
+        type: relation
+    form:
+        label: Pertanyaan
+        size: ''
+        span: full
+        type: textarea
+    value:
+        label: Pilihan
+        prompt: 'Add new option'
+        span: auto
+        type: repeater
+        form:
+            fields:
+                name:
+                    label: 'Display Name'
+                    span: auto
+                    type: text
+                value:
+                    label: Bobot
+                    options:
+                        25: 'Buruk (25)'
+                        50: 'Biasa (50)'
+                        75: 'Baik (75)'
+                        100: 'Sangat Baik (100)'
+                    showSearch: true
+                    span: auto
+                    type: dropdown

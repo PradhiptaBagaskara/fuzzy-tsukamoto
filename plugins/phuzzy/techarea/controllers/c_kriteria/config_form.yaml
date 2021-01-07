@@ -1,0 +1,10 @@
+name: Kriteria
+form: $/phuzzy/techarea/models/kriteria/fields.yaml
+modelClass: Phuzzy\Techarea\Models\Kriteria
+defaultRedirect: phuzzy/techarea/c_kriteria
+create:
+    redirect: 'phuzzy/techarea/c_kriteria/update/:id'
+    redirectClose: phuzzy/techarea/c_kriteria
+update:
+    redirect: phuzzy/techarea/c_kriteria
+    redirectClose: phuzzy/techarea/c_kriteria

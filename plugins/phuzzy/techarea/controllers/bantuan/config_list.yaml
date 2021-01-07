@@ -1,0 +1,12 @@
+list: $/phuzzy/techarea/models/bantuan/columns.yaml
+modelClass: Phuzzy\Techarea\Models\Bantuan
+title: Bantuan
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'phuzzy/techarea/bantuan/update/:id'

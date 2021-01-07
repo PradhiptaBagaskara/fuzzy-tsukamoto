@@ -1,0 +1,14 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: false
+        sortable: true
+    name:
+        label: 'Rule Name'
+        type: text
+        searchable: true
+    rule:
+        label: 'Rule Value '
+        type: text
+        searchable: true

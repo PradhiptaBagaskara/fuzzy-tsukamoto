@@ -1,0 +1,31 @@
+fields:
+    bantuan:
+        label: 'Ganti status bantuan'
+        options:
+            - 'Tidak mendapatkan bantuan'
+            - 'Mendapatkan bantuan'
+        showSearch: true
+        span: auto
+        context:
+            - update
+            - preview
+        type: dropdown
+    status:
+        label: 'Ubah status'
+        options:
+            - Review
+            - Publish
+        showSearch: true
+        span: auto
+        type: dropdown
+tabs:
+    fields:
+        fuzzy_data:
+            span: full
+            readOnly: 1
+            path: $/phuzzy/techarea/controllers/bantuan/_tabel.htm
+            context:
+                - update
+                - preview
+            type: partial
+            tab: 'Fuzzy Data'

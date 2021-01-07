@@ -1,0 +1,17 @@
+columns:
+    user_id:
+        label: nama
+        type: number
+        select: name
+        relation: user
+    created_at:
+        label: created_at
+        type: datetime
+    status:
+        label: Status
+        type: partial
+        path: $/phuzzy/techarea/models/bantuan/_status_bantuan.htm
+    bantuan:
+        label: Bantuan
+        type: partial
+        path: $/phuzzy/techarea/models/bantuan/_bantuan.htm

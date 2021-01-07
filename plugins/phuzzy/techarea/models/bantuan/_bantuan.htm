@@ -1,0 +1,9 @@
+<?php
+$key = $record->bantuan < 1 ? 'tidak dapat' : 'dapat';
+$class = $record->bantuan < 1 ? 'danger' : 'success';
+$icon = $record->bantuan < 1 ? 'times' : 'check';
+?>
+<span class="list-badge badge-<?=$class?>">
+    <i class="icon-<?=$icon?>"></i>
+</span>
+<?=$key?>

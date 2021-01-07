@@ -1,0 +1,16 @@
+fields:
+    name:
+        label: 'Display Name'
+        span: auto
+        context:
+            - update
+            - preview
+        type: text
+    code:
+        label: Code
+        span: auto
+        readOnly: 1
+        context:
+            - update
+            - preview
+        type: text

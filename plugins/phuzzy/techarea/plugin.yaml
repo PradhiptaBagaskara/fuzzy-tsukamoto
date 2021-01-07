@@ -1,0 +1,36 @@
+plugin:
+    name: 'phuzzy.techarea::lang.plugin.name'
+    description: 'phuzzy.techarea::lang.plugin.description'
+    author: Phuzzy
+    icon: oc-icon-angellist
+    homepage: ''
+navigation:
+    fuzzy-menu:
+        label: Fuzzy
+        url: phuzzy/techarea/c_form
+        icon: icon-angellist
+        sideMenu:
+            formulir:
+                label: Formulir
+                url: phuzzy/techarea/c_form
+                icon: icon-align-justify
+            rules:
+                label: Rules
+                url: phuzzy/techarea/c_rule
+                icon: icon-lock
+            kriteria:
+                label: Kriteria
+                url: phuzzy/techarea/c_kriteria
+                icon: icon-simplybuilt
+            sejahter:
+                label: 'Keluarga Sejahtera'
+                url: phuzzy/techarea/c_sejahtera
+                icon: icon-group
+    bantuan:
+        label: Bantuan
+        url: phuzzy/techarea/bantuan
+        icon: icon-archive
+permissions:
+    edit.bantuan:
+        tab: 'Edit Bantuan'
+        label: Bantuan

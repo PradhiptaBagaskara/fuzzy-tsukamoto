@@ -1,0 +1,28 @@
+
+<?php $fuzzy = $this->vars['formModel']->getFuzzy()['fuzzy_output']; ?>
+<table class="table">
+    <thead class="thead-inverse">
+        <tr>
+            <th>kriteria</th>
+            <th>value</th>
+        </tr>
+        </thead>
+        <tbody>
+            <?php foreach($fuzzy['realInput'] as $key => $val) : ?>
+            <tr>
+                <td scope="row"><?=$key?></td>
+                <td><?=$val?></td>
+            </tr>
+            <?php endforeach;  ?>
+        </tbody>
+        <tfoot>
+            <tr  style="background-color: darkgrey;">
+                <td>Fuzzy Tsukamoto Output</td>
+                <td><?=$fuzzy['tsukamoto']['bantuan']?></td>
+            </tr>
+            <tr  style="background-color: darkgrey;">
+                <td>Rule digunakan </td>
+                <td><?=$fuzzy['tsukamoto']['rule_usage']['rule']?></td>
+            </tr>
+        </tfoot>
+</table>

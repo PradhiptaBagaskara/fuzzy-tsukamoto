@@ -1,0 +1,10 @@
+name: Sejahtera
+form: $/phuzzy/techarea/models/sejahtera/fields.yaml
+modelClass: Phuzzy\Techarea\Models\Sejahtera
+defaultRedirect: phuzzy/techarea/c_sejahtera
+create:
+    redirect: 'phuzzy/techarea/c_sejahtera/update/:id'
+    redirectClose: phuzzy/techarea/c_sejahtera
+update:
+    redirect: phuzzy/techarea/c_sejahtera
+    redirectClose: phuzzy/techarea/c_sejahtera

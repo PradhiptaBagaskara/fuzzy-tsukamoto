@@ -1,0 +1,59 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table phuzzy_techarea_rule'
+    - builder_table_create_phuzzy_techarea_rule.php
+1.0.3:
+    - 'Created table phuzzy_techarea_kriteria'
+    - builder_table_create_phuzzy_techarea_kriteria.php
+1.0.4:
+    - 'Created table phuzzy_techarea_form'
+    - builder_table_create_phuzzy_techarea_form.php
+1.0.5:
+    - 'Created table phuzzy_techarea_kriteria_form'
+    - builder_table_create_phuzzy_techarea_kriteria_form.php
+1.0.6:
+    - 'Created table phuzzy_techarea_keluarga_sejahtera'
+    - builder_table_create_phuzzy_techarea_keluarga_sejahtera.php
+1.0.7:
+    - 'Created table phuzzy_techarea_keluarga_sejahtera_forms'
+    - builder_table_create_phuzzy_techarea_keluarga_sejahtera_forms.php
+1.0.8:
+    - 'Updated table phuzzy_techarea_form'
+    - builder_table_update_phuzzy_techarea_form.php
+1.0.9:
+    - 'Updated table phuzzy_techarea_kriteria_form'
+    - builder_table_update_phuzzy_techarea_kriteria_form.php
+1.0.10:
+    - 'Updated table phuzzy_techarea_keluarga_sejahtera_forms'
+    - builder_table_update_phuzzy_techarea_keluarga_sejahtera_forms.php
+1.0.11:
+    - 'Created table phuzzy_techarea_form_user'
+    - builder_table_create_phuzzy_techarea_form_user.php
+1.0.12:
+    - 'Created table phuzzy_techarea_user_bantuan'
+    - builder_table_create_phuzzy_techarea_user_bantuan.php
+1.0.13:
+    - 'Updated table phuzzy_techarea_user_bantuan'
+    - builder_table_update_phuzzy_techarea_user_bantuan.php
+1.0.14:
+    - 'Updated table phuzzy_techarea_user_bantuan'
+    - builder_table_update_phuzzy_techarea_user_bantuan_2.php
+1.0.15:
+    - 'Updated table phuzzy_techarea_user_bantuan'
+    - builder_table_update_phuzzy_techarea_user_bantuan_3.php
+1.0.16:
+    - 'Updated table phuzzy_techarea_user_bantuan'
+    - builder_table_update_phuzzy_techarea_user_bantuan_4.php
+1.0.17:
+    - 'Updated table phuzzy_techarea_user_bantuan'
+    - builder_table_update_phuzzy_techarea_user_bantuan_5.php
+1.0.18:
+    - 'Created table phuzzy_techarea_'
+    - builder_table_create_phuzzy_techarea_.php
+1.0.19:
+    - 'Updated table phuzzy_techarea_'
+    - builder_table_update_phuzzy_techarea_gaji.php
+1.0.20:
+    - 'Drop table phuzzy_techarea_gaji'
+    - builder_table_delete_phuzzy_techarea_gaji.php

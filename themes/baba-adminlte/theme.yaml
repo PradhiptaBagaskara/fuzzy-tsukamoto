@@ -1,0 +1,17 @@
+name: AdminLTE24
+description: 'AdminLTE is a fully responsive administration template. Highly customizable and easy to use. '
+author: Alex
+homepage: 'http://web4theme.com'
+code: adminlte24
+
+
+
+form:
+    fields:
+        site_name:
+            label: Site name
+            comment: The website name as it should appear on the front-end
+            default: "AdminLTE 2.4"
+        login_title:
+            label: Login form title
+            default: "<b>Admin</b>LTE 2.4"

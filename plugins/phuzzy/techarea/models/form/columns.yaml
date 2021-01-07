@@ -1,0 +1,20 @@
+columns:
+    form:
+        label: form
+        type: text
+        searchable: true
+        sortable: true
+    kriteria_id:
+        label: 'group kriteria'
+        type: text
+        searchable: true
+        sortable: true
+        relation: kriteria
+        valueFrom: name
+    keluarga_sejahtera_id:
+        label: 'group keluarga sejahtera'
+        type: text
+        searchable: true
+        sortable: true
+        relation: sejahtera
+        valueFrom: name

@@ -1,0 +1,12 @@
+list: $/phuzzy/techarea/models/sejahtera/columns.yaml
+modelClass: Phuzzy\Techarea\Models\Sejahtera
+title: Sejahtera
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'phuzzy/techarea/c_sejahtera/update/:id'

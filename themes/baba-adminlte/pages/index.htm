@@ -1,0 +1,19 @@
+title = "Demonstration"
+url = "/"
+layout = "fixed"
+is_hidden = 0
+[session]
+security = "all"
+
+==
+{% if user %}
+  <script>
+    window.location.href = "{{url('/user/profile')}}";
+  </script>
+{% else %}
+<script>
+  window.location.href = "{{url('/user/login')}}";
+</script>
+{% endif %}
+
+

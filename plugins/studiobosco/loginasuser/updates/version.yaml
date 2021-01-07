@@ -1,0 +1,6 @@
+1.0.1: First version of LoginAsUser
+1.0.2: Preventing to login as inactive user
+1.1.0:
+  - Adds login as backend user
+  - fixes missing permissions
+1.1.1: fixes backend user login permission

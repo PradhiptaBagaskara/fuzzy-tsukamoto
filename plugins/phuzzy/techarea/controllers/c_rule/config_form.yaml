@@ -1,0 +1,10 @@
+name: Rules
+form: $/phuzzy/techarea/models/rule/fields.yaml
+modelClass: Phuzzy\Techarea\Models\Rule
+defaultRedirect: phuzzy/techarea/c_rule
+create:
+    redirect: 'phuzzy/techarea/c_rule/update/:id'
+    redirectClose: phuzzy/techarea/c_rule
+update:
+    redirect: phuzzy/techarea/c_rule
+    redirectClose: phuzzy/techarea/c_rule

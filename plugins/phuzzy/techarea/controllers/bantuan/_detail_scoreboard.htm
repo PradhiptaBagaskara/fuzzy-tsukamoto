@@ -1,0 +1,34 @@
+<?php $bantuan = $this->getBantuan();?>
+
+<div class="scoreboard-item title-value">
+    <h4>Rekomendasi System</h4>
+    <p class="text-capitalize" ><?= $bantuan->getRekomendasi() ?></p>
+    <p class="description"><?=e($bantuan['created_at']) ?></p>
+</div>
+
+<div class="scoreboard-item title-value">
+    <h4>Status Bantuan User</h4>
+    <p>
+        <?= e($bantuan->bantuan < 1) ? 'Tidak Mendapatkan Bantuan': 'Mendapatkan Bantuan' ?>
+    </p>
+    <p class="description">
+        <?=e($bantuan->user->name) ?>
+    </p>
+</div>
+<div class="scoreboard-item title-value">
+    <h4>Status Publish</h4>
+    <p>
+        <?= ($bantuan->status < 1) ? 'review' : 'publish' ?>
+    </p>
+</div>
+
+<div class="scoreboard-item title-value">
+    <h4>Pendapatan Bulanan</h4>
+    <p>
+        <?= $bantuan->user->salary ? "Rp " . number_format($bantuan->user->salary,2,',','.') : "Empty" ?>
+    </p>
+    <p class="description">
+        <?=e($bantuan->user->name) ?>
+    </p>
+</div>
+

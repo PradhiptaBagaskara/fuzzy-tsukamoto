@@ -1,0 +1,10 @@
+name: Formulir
+form: $/phuzzy/techarea/models/form/fields.yaml
+modelClass: Phuzzy\Techarea\Models\Form
+defaultRedirect: phuzzy/techarea/c_form
+create:
+    redirect: 'phuzzy/techarea/c_form/update/:id'
+    redirectClose: phuzzy/techarea/c_form
+update:
+    redirect: phuzzy/techarea/c_form
+    redirectClose: phuzzy/techarea/c_form
